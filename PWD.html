@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<style type="text/css">
+		table,tr,th,td{
+			border:2px solid black;
+			border-collapse:collapse;
+		}
+	</style>
+</head>
+<body>
+	<form onsubmit="return checkpassword(this)">
+		<table>
+			<tr>
+				<td>Enter password:</td>
+				<td><input type="password" name="pwd1" oninput="checkpassword()">&#128065;</td>
+			</tr>
+			<tr>
+				<td> Re Enter Password:</td>
+				<td><input type="password" name="pwd2" oninput="checkpassword()">&#128065;</td>	
+			</tr>
+			<tr>
+				<td><td><input type="submit" name="" value="submit"></td>
+			    </td>
+			</tr>
+		</table>
+	</form>
+	<p id="message"></p>
+	<script type="text/javascript">
+		function checkpassword(form){
+			var first=form.pwd1.value;
+			//var first=document.getElementId(pwd1).value
+            //var second=document.getElementId(pwd2).value
+            var second=form.pwd2.value;
+            if(first=='')
+            {
+            	alert("please Enter password");
+            }
+            else if(second=='')
+            {
+            	alert(" conform password");
+            }
+            else if(first!==second)
+            {
+            	alert("password do not match");
+            }
+            else
+            {
+            	alert("welcome bro");
+            }
+		}
+	</script>
+</body>
+</html>

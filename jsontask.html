@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON TASK</title>
+	<link rel="https://www.restcountries.eu/rest/v2/all">
+	<link rel="stylesheet" type="text/css" href="tabledata.css">
+	</head>
+<body>
+	
+	<input type="text" name="" id="myInput" onkeyup="search()" placeholder="Search"><br><br>
+	<div class="Show">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Show"></div>
+
+	<h1>Json Data Table </h1>
+	<table id="myTable">
+    	<thead>
+    		<th>ALPHA2CODE</th>
+            <th>NAME</th>
+    		<th>CAPITAL</th>
+    		<th>REGION</th>
+    		<th>SUBREGION</th>
+    		<th>POPULATION</th>
+    	</thead>
+     <tbody id="demo"></tbody>
+    </table>
+    
+</body>
+    <script type="text/javascript">
+    	fetch("https://www.restcountries.eu/rest/v2/all")
+	    .then(res => {res.json()    //response is a call ba
+	    .then(data =>{              //work with json data  
+             var  temp="";
+             data.forEach((m)=>{
+             	temp += "<tr>";
+             	temp += "<td>" +m.alpha2Code+"</td>";
+             	temp += "<td>" +m.name+"</td>";
+             	temp += "<td>" +m.capital+"</td>";
+             	temp += "<td>" +m.region+"</td>";
+             	temp += "<td>" +m.subregion+"</td>";
+             	temp += "<td>" +m.population+"</td>";
+
+             })
+             document.getElementById('demo').innerHTML=temp;
+             })
+	})
+	    function search() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+    </script> 
+
+ 
+</html>

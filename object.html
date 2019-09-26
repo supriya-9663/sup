@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hii</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a=10;
+	function outer(b,c) {
+    var d=40;
+    function inner(e,f) {
+    var g=50;
+    return a+b+c+d+e+f+g;
+}
+return inner;
+   }
+		
+	console.log(outer(1,2)(2,3));
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:3px solid blue;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas"); //returns the element of specified id to get the value of the i/p txt
+var ctx = c.getContext("2d");//returns the object dat provides methods and properties for drawing on d canvas
+ctx.moveTo(0,0);//moves the path to d specified pt on d canvs withot cretng line
+ctx.lineTo(200,100);//add a new pt & crts a line to dat pt frm d last specified pt in cvs
+ctx.stroke();//this draw a path
+</script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+$ – Start with the current object
+. – Look inside an object
+[ ] – Look inside an array
+– Reference the value associated with a key

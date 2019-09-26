@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="myInput" type="text">
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  var text;
+  var days = document.getElementById("myInput").value;
+  switch(new date().get day()) {
+    case 0:
+      day = "Sunday";
+    break;
+    case 1:
+      day = "Monday";
+    break;
+    case 2:
+      day = "Tuesday";
+    break;
+     case 3:
+      day = "Wednesday";
+    break;
+    case 4:
+      day = "Thursday";
+    break;
+    case 5:
+      day = "Friday";
+    break;
+    case 6:
+      day = "Saturday";
+    break;
+     default:
+    day= "unknown day";
+  }
+  document.getElementById("demo").innerHTML = day;
+}
+</script>
+</body>
+</html>

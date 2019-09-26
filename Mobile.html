@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello</title>
+
+<body>
+	<label>Enter Mobile Number</label>
+	<input type="text" id="mobile" oninput="check_mobile()" name="">
+	<label id="messege"></label>
+	<div id="otp">
+		
+	</div>
+	<script>
+		var mobiles=["9591125133","9164989177","8105333307"]
+		function check_mobile(){
+			var user_mobile=document.getElementById("mobile").value;
+		var index=mobiles.indexOf(user_mobile);
+		if(index>=0){
+			document.getElementById("messege").innerHTML="";
+			document.getElementById("otp").innerHTML="<label>Enter OTP:</label><input type='text' id='mobile'name=''>";	
+		}
+		else {
+         document.getElementById("otp").innerHTML="";
+			document.getElementById("messege").innerHTML="mobile is not Resistered";
+		}
+}
+
+
+</script>

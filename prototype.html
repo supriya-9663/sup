@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Good day</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj2=new Object();
+		obj2.name="Mamta";
+		obj2.age=30;
+		function Employee(name,age,salary) {
+			this.name=name;
+			this.age=age;
+			this.salary=salary;
+		}
+		var obj3=new Employee("Vani",30,35000);
+		var obj4=Object.create(obj2);
+		console.log(obj4);
+		Object.prototype.salary = 26000; 
+			Employee.prototype.show=function(){
+				alert("this is show function")
+			}()
+			
+			console.log(obj2.salary);
+	</script>
+
+</body>
+</html>

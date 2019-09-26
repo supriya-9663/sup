@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 10px solid red;
+  width: 150px;
+   height: 105px;
+  overflow: scroll;
+}
+</style>
+</head>
+<body>
+	<p>Try the scrollbar in the div</p>
+<div id="myDIV">Apart from human the only land animal that cries is the elephant.
+<br><br>
+'Whales are the longest living animal on earth.Some whales have lived over 200 years'.
+<br><br>
+'A new born baby elephant weighs in at about 120kg,more than most fully grown human beings.  
+</div>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myDIV").onscroll = function() {myFunction()};
+function myFunction() {
+  document.getElementById("demo").innerHTML = "You scrolled in div.";
+}
+</script>
+
+</body>
+</html>
